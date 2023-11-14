@@ -57,11 +57,13 @@ class CustomizerSpec extends Specification implements TestPropertyProvider {
         logger.addAppender(appender)
 
         when:
+        //You should have 'curl' in your PATH
         def process = Runtime.getRuntime().exec("curl " + server.getURL() + RestController.PATH)
         process.waitFor()
         def response = new String(process.inputStream.readAllBytes());
 
         then:
+        process.exitValue() == 0
         response == "OK"
         appender.logMessages.size() == 0
     }
