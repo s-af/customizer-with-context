@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: customizer-with-context
+  http:
+    services:
+      wiremock:
+        url: http://override-me-in-test

@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.customizer
+testFramework: spock
+sourceLanguage: java
+buildTool: maven
+features: [app-name, groovy-maven-plus-plugin, http-client, java, java-application, logback, lombok, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, netty-server, properties, reactor-http-client, readme, serialization-jackson, shade, spock]
